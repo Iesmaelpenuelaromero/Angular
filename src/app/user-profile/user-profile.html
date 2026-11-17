@@ -1,0 +1,15 @@
+<p>user-profile works!</p>
+
+<h1>{{ titulo }}</h1>
+
+<div class="comp-user">
+  <p class="name">Nombre: {{ nombre }}</p>
+  <p class="role">Rol: {{ rol }}</p>
+</div>
+
+<h1 [innerHTML]="titulo"></h1>
+<input type="text" [value]="nombre" />
+
+<img src="{{ imagen }}" alt="imagen" />
+<img [src]="imagen" alt="imagen" />
+<p [class] = "naranja">Hola, buenas tardes! Mi nombre es Ismael</p>
