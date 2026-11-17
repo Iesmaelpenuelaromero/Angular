@@ -12,4 +12,11 @@ export class UserProfile {
   protected readonly titulo: string ='Este es el título';
   imagen: string = '/images.jpg';
   naranja: string = 'naranja';
+  marcado: boolean = true;
+  deshabilitado: boolean = true;
+  asignatura = {
+    nombre: "Ismael Peñuela Romero",
+    codigo: 123456789
+  };
 }
+
