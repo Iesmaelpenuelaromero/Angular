@@ -5,7 +5,7 @@ import { Alumno } from './alumno/alumno';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,UserProfile,Alumno],
+  imports: [RouterOutlet, UserProfile, Alumno],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
@@ -13,6 +13,8 @@ export class App {
   protected readonly title = 'Clase Angular';
   protected readonly nombre = 'Ismael Peñuela Romero';
   protected readonly edad: number = 18;
+  companero: string = '';
+  concatenado:string = '';
 
   getEdad(): number {
     return this.edad;
@@ -25,4 +27,12 @@ export class App {
       return 'Es menor de edad';
     }
   }
+  mostrarNombre(evento: any) {
+    this.companero = 'Victor Coquelet Salguero';
+  }
+
+  concatenar(event:any){
+    this.concatenado += event.target.value + ",";
+  }
+
 }

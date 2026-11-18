@@ -5,3 +5,10 @@
 <p>DNI: {{dni}}</p>
 <p>Resultado: {{multi()}}</p>
 <p>Mayoría: {{mayorEdad()}}</p>
+<p>Introducir DNI</p>
+<input type="text" (keyup)="mostrarTexto($event)" />
+<p>DNI: {{miTexto}}</p>
+<input type="checkbox" (change)="marcado($event)" [checked]="checkeado">
+<p>{{par}}</p>
+<input type="radio" name="pi" value="P" (click)="marcados($event)">Hombre
+<input type="radio" name="pi" value="I" (click)="marcados($event)">Mujer
