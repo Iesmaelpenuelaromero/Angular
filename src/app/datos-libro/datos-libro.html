@@ -1,0 +1,11 @@
+<h1>Datos Libro</h1>
+<ul>
+    <li>Título: {{libro.titulo}}</li>
+    <li>Autor: {{libro.autor}}</li>
+    <li [class.aviso]="libro.stock === 0">Stock: {{libro.stock}}</li>
+    <li>Cantidad: {{libro.cantidad}}</li>
+    <li><img [src]="libro.imagen" width="300px" (mousemove) = "mostrarApunte($event)"></li>
+</ul>
+<button (click)="anadir($event)">Añadir</button>
+<button (click)="disminuir($event)">Disminuir</button>
+<input type="text" [(ngModel)]="libro.cantidad">

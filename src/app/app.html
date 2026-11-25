@@ -9,6 +9,28 @@
 <app-user-profile></app-user-profile>
 <app-alumno></app-alumno>
 <input type="text" [value]="companero" />
-<button (click)="mostrarNombre($event)">Mostrar nombre</button><br>
-<input type="text" (keyup)="concatenar($event)">
-<p>{{concatenado}}</p>
+<button (click)="mostrarNombre($event)">Mostrar nombre</button><br />
+<input type="text" (keyup)="concatenar($event)" />
+<p>{{ concatenado }}</p>
+<div>Mi nombre es: {{ name }}</div>
+<input type="text" [(ngModel)]="name" /><br /><br />
+<input type="text" [(ngModel)]="minus1" value="{{ minus2.toUpperCase() }}" /><br />
+<input type="text" [(ngModel)]="minus2" value="{{ minus1.toLowerCase() }}" />
+<table>
+  <tr>
+    <td><input type="checkbox" [(ngModel)]="conFondo"></td>
+    <td><div [class.fondo]="conFondo"><p>Hola</p></div></td>
+  </tr>
+  <tr>
+    <td colspan="2"><a [href]="enlace">Enlace</a></td>
+  </tr>
+  <tr>
+    <td><button (click)="valorBoton($event)">{{ boton }}</button></td>
+    <td><div [hidden]="visible">Visible</div></td>
+  </tr>
+  <tr>
+    <td><button (click)="habilitarBoton($event)">{{habilitar}}</button></td>
+    <td><button [disabled]="habilitado">Hola que tal</button></td>
+  </tr>
+</table>
+<app-datos-libro></app-datos-libro>
