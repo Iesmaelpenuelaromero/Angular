@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   imports: [],
@@ -14,6 +14,11 @@ export class UserProfile {
   naranja: string = 'naranja';
   marcado: boolean = true;
   deshabilitado: boolean = true;
+  @Input()
+  namee: string = '';
+
+  @Input()
+  role: string = '';
   asignatura = {
     nombre: "Ismael Peñuela Romero",
     codigo: 123456789

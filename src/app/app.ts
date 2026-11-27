@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, Input, input, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { UserProfile } from './user-profile/user-profile';
 import { Alumno } from './alumno/alumno';
@@ -26,7 +26,15 @@ export class App {
   visible: boolean = true;
   habilitar: string = 'Habilitar';
   habilitado: boolean = true;
+  
 
+numeroLibro: number = 1;
+libroRecibido?: Libro;
+
+recibir(libro: Libro) {
+  this.libroRecibido = libro;
+}
+  
   getEdad(): number {
     return this.edad;
   }

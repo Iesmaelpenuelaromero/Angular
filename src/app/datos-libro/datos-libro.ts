@@ -16,7 +16,19 @@ export class DatosLibro {
     imagen:
       'https://www.planetadelibros.com/usuaris/libros/fotos/246/original/portada_your-name-novela_makoto-shinkai_201703091007.jpg',
   };
+  
 
+  @Input() numero: number = 1;
+@Output() seleccionado = new EventEmitter<Libro>();
+
+libros: Libro[] = [
+  { titulo: 'Harry Potter', autor: 'J.K. Rowling', precio: 20, stock: 1000, cantidad: 100, imagen: 'https://m.media-amazon.com/images/I/71QDUNlcUqL._UF1000,1000_QL80_.jpg' },
+  { titulo: 'El misterio de Abi', autor: 'J. M. Romero', precio: 15, stock: 1000, cantidad: 100, imagen: 'https://m.media-amazon.com/images/I/61mEUsasD-L._AC_UF1000,1000_QL80_.jpg' },
+];
+
+devolver() {
+  this.seleccionado.emit(this.libros[this.numero - 1]);   // posición 0 = libro 1
+}
   anadir(event: any) {
     this.libro.cantidad++;
   }
